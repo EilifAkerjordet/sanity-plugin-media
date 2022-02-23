@@ -80,7 +80,7 @@ const uploadSanityAsset$ = (
       // Begin upload if no existing asset found
       return client.observable.assets
         .upload(assetType, file, {
-          extract: ['exif', 'location', 'lqip', 'palette'],
+          extract: ['exif', 'location', 'lqip', 'palette', 'blurHash'],
           preserveFilename: true
         })
         .pipe(
